@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: zoomsig
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: zoomsig
@@ -13,7 +13,7 @@ spec:
         app: zoomsig
     spec:
       containers:
-      - image: gcr.io/webapp-prod-96269/zoomsig:1.0
+      - image: gcr.io/webapp-prod-96269/zoomsig:2.0
         name: zoomsig
         ports:
         - containerPort: 4000
@@ -25,6 +25,10 @@ spec:
           requests:
             cpu: 150m
             memory: 30Mi
+
+
+---
+
 apiVersion: v1
 kind: Service
 metadata:

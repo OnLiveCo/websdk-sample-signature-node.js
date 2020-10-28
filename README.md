@@ -1,3 +1,18 @@
+ONLIVELABS:
+
+to deploy to prod:
+increment version below and un .yaml file
+export VERSION="2.0"
+export PROJECT_ID=webapp-prod-96269
+export APP=zoomsig
+
+docker build -t gcr.io/${PROJECT_ID}/${APP}:${VERSION} .
+docker push gcr.io/${PROJECT_ID}/${APP}:${VERSION}
+kubectl apply -f ${APP}.yaml
+
+
+
+
 # Zoom Web SDK Sample Signature Node.js
 
 This is a Node.js / Express server that generates a [Web SDK signature](https://marketplace.zoom.us/docs/sdk/native-sdks/web/essential/signature) via an http request from your frontend for use in the Web SDK.
