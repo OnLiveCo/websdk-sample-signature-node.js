@@ -13,7 +13,7 @@ spec:
         app: zoomsig
     spec:
       containers:
-      - image: gcr.io/webapp-prod-96269/zoomsig:2.0
+      - image: gcr.io/webapp-prod-96269/zoomsig:3.0
         name: zoomsig
         ports:
         - containerPort: 4000

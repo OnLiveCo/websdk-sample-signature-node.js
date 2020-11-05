@@ -2,7 +2,7 @@ ONLIVELABS:
 
 to deploy to prod:
 increment version below and un .yaml file
-export VERSION="2.0"
+export VERSION="3.0"
 export PROJECT_ID=webapp-prod-96269
 export APP=zoomsig
 
